@@ -1,0 +1,12 @@
+h1 {
+    color: darkorange;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #8b8bda;
+    margin: 50px;
+}
