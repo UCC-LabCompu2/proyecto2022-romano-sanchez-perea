@@ -17,5 +17,5 @@ body {}
 
 .idc-box li, .idc-box ul, .idc-box ul li {
     padding: 0 5px;
-    list-style: outside none none !important;
+    list-style: outside none none;
 }
