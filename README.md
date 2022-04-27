@@ -1,5 +1,17 @@
-# proyecto2022
-Estructura de Proyecto Lab de Compu II - 2022
+#Título del proyecto: "Calculadora Online de Criptomonedas"
+Esta página corresponde a una calculadora de beneficios para las criptomonedas de Bitcoin y Ethereum.
+
+##Autores: 
+*Romano Victoria.
+*Sánchez Perea Francisco.
+
+##Link de gh-pages:
+
+##Contenido de la página:
+
+##Listado de tecnologías usadas: para la construcción de esta pagina web empleamos:
+*HTML5
+*CSS
 
 ## Requisitos del Primer Parcial
 
