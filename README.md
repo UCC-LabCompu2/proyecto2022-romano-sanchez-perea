@@ -1,5 +1,13 @@
-# proyecto2022
-Estructura de Proyecto Lab de Compu II - 2022
+# Calculadora de Criptos
+Esta pagina corresponde a Criptomonedas
+
+## Autores
+* Romano, Victoria
+* Sanchez Perea, Francisco
+
+## Tecnologias Usadas
+* HTML5
+* CSS3
 
 ## Requisitos del Primer Parcial
 
