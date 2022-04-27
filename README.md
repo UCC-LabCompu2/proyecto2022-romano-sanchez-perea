@@ -3,7 +3,7 @@ Esta pagina corresponde a Criptomonedas
 
 ## Autores
 * Romano, Victoria
-* Sanchez Perea, Jesús Francisco
+* Sanchez Perea, Francisco
 
 ## Tecnologias Usadas
 * HTML5
