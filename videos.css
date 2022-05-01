@@ -1,0 +1,7 @@
+div . columna1.columna2{
+    border: 2px groove black;
+    padding: 5px 30px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 10px 12px;
+}
