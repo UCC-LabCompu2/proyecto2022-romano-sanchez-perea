@@ -1,8 +1,8 @@
 body {}
 
 .idc-box {
-    background: #f9f9f9 none repeat scroll 0 0;
-    border: 1px solid #aaa;
+    background: #e362f1 none repeat scroll 0 0;
+    border: 3px solid #d51e1e;
     display: table;
     font-size: 95%;
     margin-bottom: 1em;
