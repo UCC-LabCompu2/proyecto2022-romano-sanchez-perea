@@ -7,10 +7,7 @@
     grid-template-areas:
     'imagen imagen titulo titulo titulo titulo'
     'imagen imagen logo subtitulo subtitulo subtitulo';
-    font-family: 'Orelega One', cursive;
 }
-
-
 
 .header .imagen{
     grid-area: imagen;
@@ -39,7 +36,7 @@
     word-spacing: 3px;
 }
 h3{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 
@@ -102,6 +99,7 @@ h3{
 
 body{
     font-family: 'Playfair Display', serif;
+    word-spacing: 0.5px;
 }
 
 .footer{
@@ -110,10 +108,3 @@ body{
     text-align: left;
     padding-top: 10px;
 }
-
-
-
-
-
-
-
