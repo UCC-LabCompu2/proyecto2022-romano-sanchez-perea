@@ -1,11 +1,36 @@
 .header{
-    display: flex;
- margin-top: 20px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-
+    display: grid;
+    grid-template-areas:
+    'imagen imagen titulo titulo titulo titulo'
+    'imagen imagen logo subtitulo subtitulo subtitulo';
 }
+
+.header .imagen{
+    grid-area: imagen;
+    width: 500px;
+}
+
+.header .titulo{
+    grid-area: titulo;
+    align-self: center
+}
+
+.header .logo {
+    grid-area: logo;
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    justify-self: center
+}
+
+.header .subtitulo{
+    grid-area: subtitulo;
+}
+
 
 .navegador{
     display:flex;
