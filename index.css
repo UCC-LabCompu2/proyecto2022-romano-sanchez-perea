@@ -6,29 +6,71 @@
     margin-bottom: 20px;
 
 }
-.header img{
-    width: 300px;
-    height: 200px;
-    float: left;
+
+.navegador{
+    display:flex;
 }
-.header img2{
-    width: 40px;
-    height: 50px;
+
+.boton {
+    border: 0;
+    padding: 0;
+    width: 100px;
+    height: 35px;
+    background-color: #3cb5df;
+    color: #584e4e;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 20px 0px 20px;
 }
-.h3 header{
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 25px;
+
+.cabecera {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
 }
-.header h1{
-    font-size: 50px;
-    font-family: 'Orelega One', cursive;
-    color: orange;
-    letter-spacing: 4px;
-    word-spacing: 6px;
-    padding-top: 5px;
-    padding-left: 5px;
+
+.cabecera img{
+    width: 100%;
 }
-.article{
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 15px;
+
+.cabecera h2{
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background: #1717dd;
 }
+
+.contenido-info {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.contenido-info .articulo{
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+}
+
+.contenido-info .contactos {
+    flex: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
