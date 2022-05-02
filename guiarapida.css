@@ -1,0 +1,11 @@
+a:link, a:visited{
+    color: #584e4e;
+}
+
+
+a:hover{
+    font-size: 1.4em;
+}
+a:active{
+    font-weight: bold;
+}
