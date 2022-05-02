@@ -16,7 +16,11 @@
 
 .header .titulo{
     grid-area: titulo;
-    align-self: center
+    align-self: center;
+    font-family: 'Orelega One', cursive;
+    color: orange;
+    font-size: 30px;
+    letter-spacing: 5px;
 }
 
 .header .logo {
@@ -29,6 +33,10 @@
 
 .header .subtitulo{
     grid-area: subtitulo;
+    word-spacing: 3px;
+}
+h3{
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 
@@ -89,9 +97,16 @@
 }
 
 
+body{
+    font-family: 'Playfair Display', serif;
+}
 
-
-
+.footer{
+    position: fixed;
+    left: 0;
+    text-align: left;
+    padding-top: 10px;
+}
 
 
 

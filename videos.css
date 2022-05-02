@@ -1,7 +1,10 @@
-div . columna1.columna2{
+div {
     border: 2px groove black;
-    padding: 5px 30px;
     margin: 10px;
+    padding: 5px 30px;
     border-radius: 15px;
-    box-shadow: 10px 12px;
+    box-shadow: 10px 12px black;
+}
+h2{
+    text-align: center;
 }

@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora de Criptos</title>
+    <title>Calculadora de criptos</title>
     <meta content="Romano - Sanchez Perea" name="autores">
     <meta content="web de calculadora para criptomonedas" name="descripcion">
-    <meta content="criptomonedas,bitcoin,inversiones,calculadora" name="palabras claves">
-    <link rel="shortcut icon" href="imagenes/favicon3.jpg">
+    <meta content="criptomonedas,bitcoin,inversiones, calculadora" name="palabras claves">
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css"/>
-
 </head>
 
 <body>
@@ -32,26 +30,16 @@
     <a class="boton" href="seccion%204%20videos.html"> Videos - Blockchain </a>
 </nav>
 
-<h3> <b> <u> Calculadora Simple de Bitcoin </u> </b> </h3>
+<h3> <b> <u> Calculadora Avanzada de Bitcoin </u> </b> </h3>
+
 <p>
-    Con esta calculadora de ganancias podrás averiguar qué beneficios podrías haber obtenido invirtiendo en Bitcoin o Ethereum en una fecha puntual.
+    Con esta calculadora de ganancias podrás averiguar qué beneficios podrías haber obtenido invirtiendo en Bitcoin o Ethereum en forma periódica.
 </p>
 
 <form id="formulario_para_ingresar_datos_que _serán_calculados">
-    <p>
-        Nombre:<label>
-        <input type="text" name="nombre" placeholder="Nombre">
-    </label>
-    </p>
 
     <p>
-        Apellido:<label>
-        <input type="text" name="apellido" placeholder="Apellido">
-    </label>
-    </p>
-
-    <p>
-        Inversión:<label>
+        Si hubiera invertido:<label>
         <input type="number" name="inversión" placeholder="Inversión">
     </label>
     </p>
@@ -66,7 +54,7 @@
     </p>
 
     <p>
-        Criptomoneda: Bitcoin <label>
+        En la criptomoneda: Bitcoin <label>
         <input type="checkbox" name="nombre_criptomoneda" value="criptomoneda bitcoin">
     </label> //
         Ethereum <label>
@@ -75,9 +63,17 @@
     </p>
 
 
+    <p>
+      Con frecuencia de cada<label>
+        <input type="text" name="con frecuencia de cada" placeholder="con frecuencia de cada">
+    </label>
+    </p>
+
+
+
     <form>
         <div class="nativeDatePicker">
-            <label for="fechacompra">Agregue su fecha de compra:</label>
+            <label for="fechacompra">Empezando el dia:</label>
             <input type="date" id="fechacompra" name="fechacompra" />
             <span class="validity"></span>
         </div>
@@ -88,11 +84,6 @@
     <p>
         <button type="button"> CALCULAR </button>
     </p>
-</form>
-
-
-
-
 
 
 </body>
