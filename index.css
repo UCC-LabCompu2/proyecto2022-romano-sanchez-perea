@@ -7,10 +7,7 @@
     grid-template-areas:
     'imagen imagen titulo titulo titulo titulo'
     'imagen imagen logo subtitulo subtitulo subtitulo';
-    font-family: 'Orelega One', cursive;
 }
-
-
 
 .header .imagen{
     grid-area: imagen;
