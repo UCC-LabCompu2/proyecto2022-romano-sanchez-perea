@@ -102,6 +102,10 @@ body{
     word-spacing: 0.5px;
 }
 
+#mi-canvas{
+    border: 1px solid red;
+}
+
 .footer{
     position: fixed;
     left: 0;
