@@ -25,8 +25,7 @@
 
 <nav class="navegador">
     <a class="boton" href="index.html"> Empieza Aquí </a>
-    <a class="boton" href="seccion%202%20calculadora.html"> Calculadora Simple de Bitcoin </a>
-    <a class="boton" href="seccion%203%20calculadora%20avanzada.html"> Calculadora Avanzada de Bitcoin </a>
+    <a class="boton" href="seccion%202%20calculadora.html"> Calculadora de Bitcoin </a>
     <a class="boton" href="seccion%204%20guia%20rapida.html"> Guia Rápida </a>
     <a class="boton" href="seccion%205%20videos.html"> Videos - Blockchain </a>
 </nav>
@@ -37,20 +36,10 @@
 </p>
 
 <form id="formulario_para_ingresar_datos_que_serán_calculados">
-    <p>
-        Nombre:<label>
-        <input type="text" name="nombre" placeholder="Nombre">
-    </label>
-    </p>
-
-    <p>
-        Apellido:<label>
-        <input type="text" name="apellido" placeholder="Apellido">
-    </label>
-    </p>
-
+    <!-- Calculadora Simple -->
     <p>
         Inversión:<label>
+        <!-- usar id para traer el valor -->
         <input type="number" name="inversión" placeholder="Inversión">
     </label>
     </p>
@@ -73,20 +62,40 @@
     </label>
     </p>
 
+    <p class="esconder">
+        Con frecuencia de cada<label>
+        <input type="text" name="con frecuencia de cada" placeholder="con frecuencia de cada">
+    </label>
+    </p>
 
-    <form>
-        <div class="nativeDatePicker">
+
+    <div class="nativeDatePicker esconder">
+            <label for="fechacompra">Empezando el dia:</label>
+            <input type="date" id="fechacompraavanzada" name="fechacompra" />
+            <span class="validity"></span>
+    </div>
+
+
+
+    <div class="nativeDatePicker">
             <label for="fechacompra">Agregue su fecha de compra:</label>
             <input type="date" id="fechacompra" name="fechacompra" />
             <span class="validity"></span>
-        </div>
-
-    </form>
-
+    </div>
 
     <p>
-        <button type="button"> CALCULAR </button>
+        <button id="calculadora-avanzada" type="button"  onclick="CalculadoraAvanzada()"> Calculadora Avanzada </button>
     </p>
+
+    <p>
+        <button id="calculadora-simple" type="button"  onclick="CalculadoraSimple()" class="esconder"> Calculadora Simple </button>
+    </p>
+
+    <p>
+        <button type="button" onclick="calcular()"> CALCULAR </button>
+    </p>
+
+    <!-- crear un div que diga el resultado -->
 </form>
 
 

@@ -103,7 +103,7 @@ body{
 }
 
 #mi-canvas{
-    border: 1px solid red;
+    border: 1px solid #ff0000;
 }
 
 .footer{
@@ -111,4 +111,7 @@ body{
     left: 0;
     text-align: left;
     padding-top: 10px;
+}
+.esconder{
+    display: none;
 }
