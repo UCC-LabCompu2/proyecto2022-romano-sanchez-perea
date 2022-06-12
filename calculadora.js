@@ -39,30 +39,40 @@ function calcularROI(invInicial, ganancia, invTotal) {
     return roi;
 }
 
-function cargarResultado{
-    const urlcomp = window.location.href; // es una funcion traer url del navegador
-    console.log(urlcomp) //  console.log imprimir la url
-    // obterner el div por ID
-    // const divResultado = getElm(id)
-    // obtener inicial, ganancia, total
-    // const inicial = getElm(inputInicial) => repetir con ganancia y total
-    /*
-        HTMLElement Input
-        console.log(Input)
-        // usuario hizo => document.getElementById("Gasto_Usuario").value = 445;
-        // nosotro hacemos => const valueInicial = document.getElementById("Gasto_Usuario").value;
-
-        const valueInicial
-        const ganancia
-        const total
-    */
-    // obtener ROI
-    // const valor = calcularROI(inicial, ganancia, total);
-    // ponerle el resultado al div
-    // innerHTML = `El resultado... ${valor}
+/**
+ * ObtenerValordeInput;
+ * @param {string} id -
+ * Returns
+ */
+function obtenerValorDeInput(id) {
+    return document.getElementById(id).value;
 }
 
-alert ("se ingreso un valor invalido, por favor ingrese de nuevo");
+/**
+ * obtenerDivisa();
+ * returns
+ */
+function obtenerDivisa() {
+    return document.querySelector('input[name="divisa"]:checked').value;
+}
+
+/**
+ * obtenerValores();
+ * @param {number} gastoUsuario -El id del input del valor de la inversión del usuario.
+ * @param {date} fechaCompra - La fecha del input para agregar el dia de la inversión en bitcoin.
+ * @param {radio} divisa - El tipo de divisa que siempre será en Dolares Americanos.
+ */
+function obtenerValores() {
+    const gastoUsuario = obtenerValorDeInput('Gasto_Usuario');
+    const fechaCompra = obtenerValorDeInput('Fecha_Compra');
+    const divisa = obtenerDivisa();
+}
+
+/**
+ * Calcular() ;
+ *
+ *
+ */
 function calcular() {
     // ... implementacion
     // llamar calcularROI(valores....)
