@@ -1,0 +1,117 @@
+.header{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-areas:
+    'imagen imagen titulo titulo titulo titulo'
+    'imagen imagen logo subtitulo subtitulo subtitulo';
+}
+
+.header .imagen{
+    grid-area: imagen;
+    width: 500px;
+}
+
+.header .titulo{
+    grid-area: titulo;
+    align-self: center;
+    font-family: 'Orelega One', cursive;
+    color: orange;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.header .logo {
+    grid-area: logo;
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    justify-self: center
+}
+
+.header .subtitulo{
+    grid-area: subtitulo;
+    word-spacing: 3px;
+}
+h3{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+.navegador{
+    display:flex;
+}
+
+.boton {
+    border: 0;
+    padding: 0;
+    width: 100px;
+    height: 35px;
+    background-color: #3cb5df;
+    color: #584e4e;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 20px 0 20px;
+}
+
+.cabecera {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.cabecera img{
+    width: 100%;
+}
+
+.cabecera h2{
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background: #1717dd;
+}
+
+.contenido-info {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.contenido-info .articulo{
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+}
+
+.contenido-info .contactos {
+    flex: 0.3;
+}
+
+
+body{
+    font-family: 'Playfair Display', serif;
+    word-spacing: 0.5px;
+}
+
+#mi-canvas{
+    border: 1px solid #ff0000;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    text-align: left;
+    padding-top: 10px;
+}
+.esconder{
+    display: none;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <title>Calculadora de Criptos</title>
     <meta content="Romano - Sanchez Perea" name="autores">
@@ -8,130 +9,64 @@
     <meta content="criptomonedas,bitcoin,inversiones,calculadora" name="palabras claves">
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="shortcut icon" href="imagenes/favicon3.jpg">
+
 </head>
 
-<style>
-    div{
-        border: 2px groove black;
-        margin: 10px;
-        padding: 5px 30px;
-        border-radius: 15px;
-        box-shadow: 10px 12px black;
-
-    }
-    header{
-        color: #ff8c00;
-        font-family: 'Orelega One', cursive;
-        word-spacing: 80cm ;
-        text-align: center;
-
-    }
-    #subtitulo principal{
-        color: black;
-        letter-spacing: 2px ;
-        word-spacing: 2px;
-        text-align: center;
-
-    }
-
-    header img{
-        width: 300px;
-        float: left;
-    }
-    img{
-        width: 500px;
-        position: center;
-        padding-top: 31px;
-        padding-left: 60px ;
-
-    }
-    body{
-        font-family: 'Playfair Display', serif;
-    }
-    div h2 h3 h4{
-        font-family: 'Nanum Gothic', sans-serif;
-    }
-</style>
-
-
 <body>
-<header>
-    <img src="imagenes/imagen1.jpg" alt="imagen de una calculadora">
-    <h1> Calculadora de Criptos </h1>
-    <h2 id="subtitulo principal" style= " color: black; letter-spacing: 4px ;word-spacing: 4px;
-    text-align: center "> "Tecnologia, Bitcoin e inversiones"</h2>
+
+<header class="header">
+    <img class="imagen" src="imagenes/imagen1.jpg" alt="imagen de una calculadora"/>
+    <h1 class="titulo">CALCULADORA DE CRIPTOS</h1>
+    <img class= "logo" src="imagenes/logobitcoin.png" alt="imagen logo bitcoin"/>
+    <h3 class="subtitulo">"Tecnologia,bitcoin e inversion"</h3>
 </header>
 
 
-
-
-<body>
-<div class="contenedor">
-    <h1>Botones Animados</h1>
-
-    <div class="contenedor-botones">
-        <button class="boton uno"><span>Botón</span></button>
-        <button class="boton dos"><span>Botón</span></button>
-        <button class="boton tres"><span>Botón</span></button>
-        <button class="boton cuatro"><span>Botón</span></button>
-        <button class="boton cinco">
-            <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                </svg>
-            </div>
-            <span>Botón</span>
-        </button>
-        <button class="boton seis">
-            <span>Botón</span>
-            <svg>
-                <rect x="0" y="0" fill="none"></rect>
-            </svg>
-        </button>
-    </div>
-</div>
-</body>
+<nav class="navegador">
+    <a class="boton" href="index.html"> Empieza Aquí </a>
+    <a class="boton" href="seccion%202%20calculadora.html"> Calculadora de Bitcoin </a>
+    <a class="boton" href="seccion%204%20guia%20rapida.html"> Guia Rápida </a>
+    <a class="boton" href="seccion%205%20videos.html"> Videos - Blockchain </a>
+</nav>
 
 
 
-
-
-
-
-<section>
+<section class="cabecera" >
 
     <img src="imagenes/imagen2.PNG" alt="imagen ilustrativa de una moneda bitcoin">
+    <h2> Empieza Aquí </h2>
 
 </section>
 
+<section class="contenido-info">
+    <article class="articulo">
 
-<section>
-    <div>
-        <h2>Que es una criptomoneda</h2>
+        <h2>¿Que es una criptomoneda?</h2>
 
-        <p>Una criptomoneda es una moneda virtual, peer to peer y distribuida cuyo concepto nació con el whitepaper de la
+        <p> Una criptomoneda es una moneda virtual, peer to peer y distribuida cuyo concepto nació con el whitepaper de la
             primera criptomoneda, el Bitcoin.
             Los usuarios pueden utilizar las criptomonedas para hacer todo aquello que se puede hacer con dinero
             convencional (denominado fiat): comprar o vender bienes, enviar dinero a otras personas u organizaciones o
             extender un crédito.
+        </p>
+        <p>
             Las criptomonedas pueden ser vendidas o compradas en centro de intercambio denominados exchanges.
             En cierto sentido las criptomonedas son la forma perfecta de dinero para internet porque son rápidas, seguras y
             no tienen fronteras.
         </p>
 
-    </div>
-    <div>
         <h4> Comprar o invertir en Bitcoin </h4>
 
         <p> Como moneda, la forma básica de invertir en Bitcoin simplemente significa comprar la moneda. Además, existe una palabra en inglés que
             describe una acción, esa palabra es "hold". Holdear bitcoin es un término muy utilizado en el mundo cripto para describir la acción de comprar
-            y reunir unidades de Bitcoin (satoshis) para no gastarlos. Su principal finalidad es esperar a que aumenten su valor, y observar cómo la inversión inicial se revaloriza.
+            y reunir unidades de Bitcoin (satoshis) para no gastarlos. </p>
+        <p>Su principal finalidad es esperar a que aumenten su valor, y observar cómo la inversión inicial se revaloriza.
             Bitcoin ha sido proclamado muerto numerosas veces. Sin embargo, esta es la verdad sobre lo rentable que ha sido comprar y mantener Bitcoin en cualquier momento:
             Bitcoin ha sido rentable durante 4466 días de un total de 4816 días (92,73%).</p>
-    </div>
 
-    <div>
         <h4> Algunos puntos para las personas que quieran invertir en esta y otras criptomonedas:</h4>
         <ol>
             <li> Nunca inviertas más de lo que estés dispuesto a perder/arriesgar. Bitcoin se trata de un activo muy volátil por lo que su precio puede varias.</li>
@@ -139,37 +74,38 @@
             <li> Asegurate de comprar bitcoin exclusivamente en sitios autorizados y con buena reputación. Ten cuidado donde estás registrando tus datos personales para crear una cuenta y a cuales sitios ingresas para comprarlos.</li>
             <li> Para comprar bitcoin es recomendable aplicar DCA (Dollar Cost Averaging por sus siglas en inglés). Se trata de una estrategia de inversión que consiste en invertir la misma cantidad de dinero durante un período de tiempo (pueden ser semanas, meses o años) sin importar en qué precio esté bitcoin. Esto significa que no compras todos tus Bitcoins en una sola operación, sino que compras una cantidad fija cada mes, semana o incluso días durante todo el año. De esta manera, promedias el precio en el transcurso de todo un año. </li>
         </ol>
-    </div>
 
-    <div>
         <h2> Perspectiva general sobre la historia del precio de Bitcoin </h2>
 
         <p>
-            El precio de Bitcoin ha experimentado cinco picos significativos desde que fue creado en 2009. Hasta la fecha, la criptomoneda ha tenido un máximo histórico de aproximadamente 69.000 USD y un incremento generalizado en su adopción. El proceso ha sido volátil, a menudo como reacción a acontecimientos políticos, económicos y regulatorios.
+            El precio de Bitcoin ha experimentado cinco picos significativos desde que fue creado en 2009. Hasta la fecha, la criptomoneda ha tenido un máximo histórico de aproximadamente 69.000 USD y un incremento generalizado en su adopción.
+            El proceso ha sido volátil, a menudo como reacción a acontecimientos políticos, económicos y regulatorios.
         </p>
 
         <p> Bitcoin ha experimentado, de media, un crecimiento del 200% anual. En la actualidad, agosto de 2021, la capitalización de mercado de Bitcoin es de aproximadamente 745.000.000.000 USD, y su dominio del mercado de las cripto es algo menor del 50%. </p>
 
-        <p> Bitcoin (BTC) ha capturado la imaginación del mundo con su incremento masivo de valor desde 2009. Sin embargo, no todo han sido carreras alcistas y ganancias. Bitcoin también ha experimentado caídas y mercados bajistas. A pesar de su volatilidad, la criptomoneda ha tenido un mejor rendimiento hasta la fecha que todo el resto de activos tradicionales. Una combinación de múltiples factores conforma el historial de precios de Bitcoin, y uno puede estudiarlos mediante distintas técnicas y puntos de vista. </p>
-    </div>
+        <p> Bitcoin (BTC) ha capturado la atención del mundo con su incremento masivo de valor desde 2009. Sin embargo, no todo han sido carreras alcistas y ganancias. Bitcoin también ha experimentado caídas y mercados bajistas.
+            A pesar de su volatilidad, la criptomoneda ha tenido un mejor rendimiento hasta la fecha que todo el resto de activos tradicionales. Una combinación de múltiples factores conforma el historial de precios de Bitcoin, y uno puede estudiarlos mediante distintas técnicas y puntos de vista.
+        </p>
 
-    <div>
-        <h2> ¿Qué es el retorno de la inversión (ROI)? </h2>
+    </article>
 
-        <p> El retorno de la inversión (ROI) es una forma de medir el rendimiento de una inversión. También puede ser utilizado para comparar distintas inversiones. </p>
-        <nav>
-            <p> Si quieres aprender más sobre qué es el ROI, cómo calcularlo y realizar una simulación de ganancias en BTC o ETH te invitamos a visitar nuestra sección de  <a href="seccion 2 calculadora simple.html">Calculadora.</a>
-        </nav>
-    </div>
+    <aside class="contactos">
+
+        <p>Necesitas ASESORAMIENTO para armar tu cartera? </p>
+        <a href="#">CONTÁCTENOS</a>
+
+    </aside>
+
 
 </section>
-<aside>
-    <h5>¿Necesitas asesoramiento para armar tu cartera o portafolio?</h5>
-    <h6>CONTÁCTENOS</h6>
-    <img src="imagenes/portafolio.criptos.webp" alt="portfolio">
-</aside>
+
+
+
 <footer>
-    Romano-Sanchez Perea - Estudiantes de Ingeniería
+    <h5> COLABORADORES: Romano - Sánchez Perea.
+        Estudiantes de la UCC </h5>
 </footer>
+
 </body>
 </html>
