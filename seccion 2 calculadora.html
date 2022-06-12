@@ -31,80 +31,77 @@
 </nav>
 
 <h3> <b> <u> Calculadora  de Bitcoin </u> </b> </h3>
+
 <p>
     Con esta calculadora de ganancias podrás averiguar qué beneficios podrías haber obtenido invirtiendo en Bitcoin en una fecha puntual.
 </p>
 
-    <form id="formulario_para_ingresar_datos_que_serán_calculados">
-        <!-- Calculadora Simple -->
+<form id="formulario_para_ingresar_datos_que_serán_calculados">
+    <!-- Calculadora Simple -->
+    <p>
+        Inversión:
+        <label>
+            <!-- usar id para traer el valor -->
+            <input id="Gasto_Usuario" type="number" name="inversión" placeholder="Inversión">
+        </label>
+    </p>
+
+    <p>
+        Divisa: Dólares
+        <label>
+            <input type="radio" name="divisa" value="dólares" checked="true">
+        </label>
+        Pesos
+        <label>
+            <input type="radio" name="divisa" value="pesos">
+        </label>
+    </p>
+
+    <p class="avanzada esconder">
+        Con frecuencia de cada
+        <label>
+            <input type="text" name="con frecuencia de cada" placeholder="con frecuencia de cada">
+        </label>
+    </p>
+
+    <div class="simple nativeDatePicker">
+        <label for="Fecha_Compra">Agregue su fecha de compra:</label>
+        <input type="date" id="Fecha_Compra" name="Fecha_Compra" />
+        <span class="validity"></span>
+    </div>
+
+    <div class="avanzada nativeDatePicker esconder">
+        <label for="Fecha_Compra_Avanzada">Empezando el dia:</label>
+        <input type="date" id="Fecha_Compra_Avanzada" name="Fecha_Compra_Avanzada" />
+        <span class="validity"></span>
+    </div>
+
+
+    <div class="Calculadora Simple">
+        <p class="ROI">Calcula tu ROI</p>
+        <p class="Aviso">¿Qué tan exitosas pudieron haber sido tus inversiones? Con nuestra útil calculadora podrás descubrir cuál es el Retorno de la inversión (ROI) de cada una de tus Inversiones. </p>
+        <p class="Aviso2">¡Cuantifica económicamente la efectividad de tus inversiones!</p>
         <p>
-            Inversión:
-            <label>
-                <!-- usar id para traer el valor -->
-                <input id="Gasto_Usuario" type="number" name="inversión" placeholder="Inversión">
-            </label>
+            <button type="button" onclick="calcular()"> CALCULAR </button>
         </p>
+    </div>
 
-        <p>
-            Divisa: Dólares
-            <label>
-                <input type="radio" name="divisa" value="dólares" checked="true">
-            </label>
-            Pesos
-            <label>
-                <input type="radio" name="divisa" value="pesos">
-            </label>
-        </p>
+    <!-- crear un div que diga el resultado -->
+    <div id="resultado">
+        Usted usuario al haber invertido tanta cantidad de plata hoy tendría un retorno de su inversion inicial de...
+    </div>
+</form>
 
-        <p class="avanzada esconder">
-            Con frecuencia de cada
-            <label>
-                <input type="text" name="con frecuencia de cada" placeholder="con frecuencia de cada">
-            </label>
-        </p>
-
-        <div class="simple nativeDatePicker">
-            <label for="Fecha_Compra">Agregue su fecha de compra:</label>
-                <input type="date" id="Fecha_Compra" name="Fecha_Compra" />
-            <span class="validity"></span>
-        </div>
-
-        <div class="avanzada nativeDatePicker esconder">
-            <label for="Fecha_Compra_Avanzada">Empezando el dia:</label>
-                <input type="date" id="Fecha_Compra_Avanzada" name="Fecha_Compra_Avanzada" />
-            <span class="validity"></span>
-        </div>
-
-        <p>
-            <button class="simple" type="button"  onclick="CalculadoraAvanzada()"> Calculadora Avanzada </button>
-        </p>
-
-        <p>
-            <button class="avanzada esconder" type="button"  onclick="CalculadoraSimple()" class="esconder"> Calculadora Simple </button>
-        </p>
-
-        <div class="Calculadora Simple">
-            <p class="ROI">Calcula tu ROI</p>
-            <p class="Aviso">¿Qué tan exitosas pudieron haber sido tus inversiones? Con nuestra útil calculadora podrás descubrir cuál es el Retorno de la inversión (ROI) de cada una de tus Inversiones. </p>
-            <p class="Aviso2">¡Cuantifica económicamente la efectividad de tus inversiones!</p>
-            <p>
-                <button type="button" onclick="calcular()"> CALCULAR </button>
-            </p>
-        </div>
-
-        <!-- crear un div que diga el resultado -->
-        <div id="resultado">
-            Usted usuario al haber invertido tanta cantidad de plata hoy tendría un retorno de su inversion inicial de...
-        </div>
-    </form>
-
-<canvas id="mi-canvas" width="400" height="200"> </canvas>
+<canvas id="mi-canvas"></canvas>
 
 <footer>
-    <h5> COLABORADORES: Romano Victoria - Sánchez Perea.
-        Estudiantes de la UCC </h5>
+    <h5> COLABORADORES: Romano Victoria - Sánchez Perea. Estudiantes de la UCC </h5>
 </footer>
 
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.js"></script>
 <script type="text/javascript" src="calculadora.js"></script>
+
+
 </body>
 </html>
