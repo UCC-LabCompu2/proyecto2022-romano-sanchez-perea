@@ -56,7 +56,35 @@ function CalculadoraSimple() {
  */
 function calcularROI(retorno, invInicial, invTotal) {
     const inversionTotal = invTotal ? invTotal : invInicial;
-    return (retorno - invInicial)/invTotal;
+    return (retorno - invInicial)/inversionTotal;
+}
+
+/**
+ *
+ */
+function calcularROIYMostrar(gastoUsuario, fechaCompra, divisa) {
+    Promise.all([fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/history?date=${formatearFecha(fechaCompra)}&localization=false`)
+        .then((response) => response.json()), fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd%2Cars')
+        .then((response) => response.json())])
+        .then(([datos, precios]) => {
+            const precioEnFecha = obtenerPrecioEnFecha(datos);
+            const precioPorDivisa = obtenerPrecioPorDivisa(precios);
+
+            let roi;
+            switch (divisa) {
+                case 'dolares':
+                    const invInicialBitcoinDolares = gastoUsuario/precioEnFecha.usd;
+                    const retornoDolares = invInicialBitcoinDolares * precioPorDivisa.usd;
+                    roi = calcularROI(retornoDolares, parseFloat(gastoUsuario));
+                    return alert(`La ganancia fue de: ${retornoDolares-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
+                case 'pesos':
+                default:
+                    const invInicialBitcoinPesos = gastoUsuario/precioEnFecha.ars;
+                    const retornoPesos = invInicialBitcoinPesos * precioPorDivisa.ars;
+                    roi = calcularROI(retornoPesos, parseFloat(gastoUsuario));
+                    return alert(`La ganancia fue de: ${retornoPesos-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
+            }
+        })
 }
 
 /**
@@ -110,34 +138,7 @@ function obtenerPrecioPorDivisa(datos) {
  */
 function calcular() {
     const { gastoUsuario, fechaCompra, divisa } = obtenerValores();
-
-    Promise.all([fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/history?date=${formatearFecha(fechaCompra)}&localization=false`)
-        .then((response) => response.json()), fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd%2Cars')
-        .then((response) => response.json())])
-        .then(([datos, precios]) => {
-            const precioEnFecha = obtenerPrecioEnFecha(datos);
-            const precioPorDivisa = obtenerPrecioPorDivisa(precios);
-
-            let roi;
-            let inversionInicial;
-            let retorno;
-            switch (divisa) {
-                case 'dolares':
-                    inversionInicial = gastoUsuario/precioEnFecha.usd;
-                    retorno = inversionInicial * precioPorDivisa.usd;
-                    roi = calcularROI(retorno, gastoUsuario);
-                    break;
-                case 'pesos':
-                default:
-                    inversionInicial = gastoUsuario/precioEnFecha.ars;
-                    retorno = inversionInicial * precioPorDivisa.ars;
-                    roi = calcularROI(retorno, gastoUsuario);
-                    break;
-            }
-            console.log({precioEnFecha, precioPorDivisa})
-            console.log({roi});
-        })
-
+    calcularROIYMostrar(gastoUsuario, fechaCompra, divisa);
     crearGrafico(fechaCompra);
 }
 
@@ -200,7 +201,8 @@ function crearGrafico(fecha) {
                 style: 'currency',
                 currency: 'USD',
             });
-            const lineChart = document.getElementById('mi-canvas').getContext('2d');
+            const canvas = document.getElementById('mi-canvas');
+            const lineChart = canvas.getContext('2d');
             const config = {
                 type: 'line',
                 data: {
@@ -235,18 +237,8 @@ function crearGrafico(fecha) {
                     }
                 }
             };
+            // aqui es donde el grafico se hace
             new Chart(lineChart, config);
+            canvas.classList.remove('esconder');
         })
 }
-
-/*
-
-curl -X 'GET' \
-  'https://api.coingecko.com/api/v3/coins/bitcoin/history?date=12-06-2022&localization=false' \
-  -H 'accept: application/json'
-
-curl -X 'GET' \
-  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd%2Cars' \
-  -H 'accept: application/json'
-
-*/
