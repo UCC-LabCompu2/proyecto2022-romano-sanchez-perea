@@ -1,27 +1,3 @@
-/**
- * Descripcion: Función que muestra los campos a rellenar en el formulario del Cálculo de ROI;
- * @param lista  [HTMLElement]
- * Returns comprueba el estado del parámetro para mostrar los elementos deseados.
- */
-function mostrarElementos(lista) {
-    for (let item of lista) {
-        item.classList.remove('esconder');
-        item.classList.add('mostrar');
-    }
-}
-
-/**
- * Descripción: Función que oculta los campos a rellenar en el formulario del Cálculo de ROI;;
- * @param lista [HTMLElement]
- * Returns comprueba el estado del parámetro para esconder los elementos deseados.
- */
-function esconderElementos(lista) {
-    for (let item of lista) {
-        item.classList.remove('mostrar');
-        item.classList.add('esconder');
-    }
-}
-
 /** Acceso al DOM
  * Descripción: CalculadoraAvanzada() sirve para obtener las ganancias que hubieran retornado al usuario por invertir cierta cantidad de dinero en bitcoin de forma periódica ;
  * @param {Class} listaElementosEscondidos -
@@ -33,6 +9,7 @@ function CalculadoraAvanzada() {
     mostrarElementos(listaElementosEscondidos);
     esconderElementos(listaElementosVisibles);
 }
+
 
 /**
  * CalculadoraSimple()  sirve para obtener las ganancias que hubieran retornado al usuario por invertir cierta cantidad de dinero en bitcoin en una fecha puntual;
@@ -76,13 +53,13 @@ function calcularROIYMostrar(gastoUsuario, fechaCompra, divisa) {
                     const invInicialBitcoinDolares = gastoUsuario/precioEnFecha.usd;
                     const retornoDolares = invInicialBitcoinDolares * precioPorDivisa.usd;
                     roi = calcularROI(retornoDolares, parseFloat(gastoUsuario));
-                    return alert(`La ganancia fue de: ${retornoDolares-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
+                    return alert(`El resultado de su inversion en cantidad de dinero es de: ${retornoDolares-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
                 case 'pesos':
                 default:
                     const invInicialBitcoinPesos = gastoUsuario/precioEnFecha.ars;
                     const retornoPesos = invInicialBitcoinPesos * precioPorDivisa.ars;
                     roi = calcularROI(retornoPesos, parseFloat(gastoUsuario));
-                    return alert(`La ganancia fue de: ${retornoPesos-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
+                    return alert(`El resultado de su inversion en cantidad de dinero es de: ${retornoPesos-gastoUsuario}, El ROI es: ${roi.toFixed(2)}`);
             }
         })
 }
@@ -110,6 +87,22 @@ function obtenerDivisa() {
  * @param {date} fechaCompra - La fecha del input para agregar el dia de la inversión en bitcoin.
  * @param {radio} divisa - El tipo de divisa que siempre será en Dolares Americanos.
  */
+
+/* Esperamos a la carga del DOM */
+window.addEventListener('DOMContentLoaded', (evento) => {
+    /* Obtenemos la fecha de hoy en formato ISO */
+    const hoy_fecha = new Date().toISOString().substring(0, 10);
+    /* Buscamos la etiqueta, ya sea por ID (que no tiene) o por su selector */
+    document.querySelector("input[name='Fecha_Compra']").max = hoy_fecha;
+});
+
+function noNumero(valor){
+    if (isNaN(valor)){
+        alert("Usted Usuario ingresó un valor inválido")
+        document.CalculadoraSimple.inversión.value = "";
+    }
+}
+
 function obtenerValores() {
     const gastoUsuario = obtenerValorDeInput('Gasto_Usuario');
     const fechaCompra = obtenerValorDeInput('Fecha_Compra');
@@ -240,5 +233,6 @@ function crearGrafico(fecha) {
             // aqui es donde el grafico se hace
             new Chart(lineChart, config);
             canvas.classList.remove('esconder');
+
         })
 }

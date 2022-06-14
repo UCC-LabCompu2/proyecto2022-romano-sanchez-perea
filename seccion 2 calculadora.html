@@ -19,7 +19,7 @@
     <img class="imagen" src="imagenes/imagen1.jpg" alt="imagen de una calculadora"/>
     <h1 class="titulo">CALCULADORA DE CRIPTOS</h1>
     <img class= "logo" src="imagenes/logobitcoin.png" alt="imagen logo bitcoin"/>
-    <h3 class="subtitulo">"Tecnologia,bitcoin e inversion"</h3>
+    <h3 class="subtitulo">"Tecnologia, Bitcoin e inversion"</h3>
 </header>
 
 
@@ -36,13 +36,13 @@
     Con esta calculadora de ganancias podrás averiguar qué beneficios podrías haber obtenido invirtiendo en Bitcoin en una fecha puntual.
 </p>
 
-<form id="formulario_para_ingresar_datos_que_serán_calculados">
+<form name="CalculadoraSimple" id="formulario_para_ingresar_datos_que_serán_calculados">
     <!-- Calculadora Simple -->
     <p>
         Inversión:
         <label>
             <!-- usar id para traer el valor -->
-            <input id="Gasto_Usuario" type="number" name="inversión" placeholder="Inversión">
+            <input id="Gasto_Usuario" type="text" name="inversión" placeholder="Inversión" onchange="noNumero(this.value)">
         </label>
     </p>
 
@@ -57,22 +57,11 @@
         </label>
     </p>
 
-    <p class="avanzada esconder">
-        Con frecuencia de cada
-        <label>
-            <input type="text" name="con frecuencia de cada" placeholder="con frecuencia de cada">
-        </label>
-    </p>
+
 
     <div class="simple nativeDatePicker">
         <label for="Fecha_Compra">Agregue su fecha de compra:</label>
         <input type="date" id="Fecha_Compra" name="Fecha_Compra" />
-        <span class="validity"></span>
-    </div>
-
-    <div class="avanzada nativeDatePicker esconder">
-        <label for="Fecha_Compra_Avanzada">Empezando el dia:</label>
-        <input type="date" id="Fecha_Compra_Avanzada" name="Fecha_Compra_Avanzada" />
         <span class="validity"></span>
     </div>
 
@@ -86,10 +75,6 @@
         </p>
     </div>
 
-    <!-- crear un div que diga el resultado -->
-    <div id="resultado">
-        Usted usuario al haber invertido tanta cantidad de plata hoy tendría un retorno de su inversion inicial de...
-    </div>
 </form>
 
 <canvas id="mi-canvas" class="esconder"></canvas>
