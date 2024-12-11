@@ -1,5 +1,5 @@
-# Calculadora de Criptos
-Esta pagina corresponde a Criptomonedas
+# Calculadora de criptos
+Esta página corresponde a criptomonedas
 
 ## Autores
 * Romano, Victoria
